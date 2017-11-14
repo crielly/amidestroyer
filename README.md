@@ -2,7 +2,7 @@
 Tool for keeping AMIs and associated snapshots under control
 ```
 Usage:
-    ami_destroyer.py <requiredtag> [options]
+    amidestroyer.py <requiredtag> [options]
 
 Arguments:
     <requiredtag>               Tag required for an AMI to be cleaned up in the form tag:NameOfTag
