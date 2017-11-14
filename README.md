@@ -8,7 +8,7 @@ Arguments:
     <requiredtag>               Tag required for an AMI to be cleaned up in the form tag:NameOfTag
 
 Options:
-    --retain=<retain>           Number of images to retain, sorted newest to latest [default: 2]
+    --retain=<retain>           Number of images to retain - keeps newest images [default: 2]
     --regions=<regions>         A comma-separated list of AWS Regions to run against [default: us-east-1]
     --help                      Show this help string
     --dryrun                    List the AMIs that'll be destroyed by this script
