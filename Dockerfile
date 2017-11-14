@@ -4,7 +4,7 @@ RUN mkdir -p /code
 
 ENV PYTHONPATH=/code
 
-ADD requirements.txt /code/
+ADD . /code
 
 WORKDIR /code
 
@@ -12,4 +12,3 @@ RUN pip install -r requirements.txt
 
 ENTRYPOINT ["python3"]
 
-ADD . /code
