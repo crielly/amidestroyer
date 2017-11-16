@@ -62,11 +62,6 @@ def sort_curated_images(curatedimages):
             'ami_id': i.image_id,
             'snapshot_id': i.block_device_mappings[0]['Ebs']['SnapshotId']
         })
-        _LOGGER.info(
-            "Appending {} to {} dict".format(
-                i.image_id, iname
-            )
-        )
         sortedimages[iname] = sorted(
             sortedimages[iname],
             key=itemgetter('creation_date'),
@@ -126,7 +121,7 @@ if __name__ == '__main__':
     setup_logging()
 
     for r in regions.split(','):
-        _LOGGER.info("Running cleanup for region {}".format(r))
+        _LOGGER.info("##### Running cleanup for region {} #####".format(r))
         ec2 = boto3.resource('ec2', region_name=r)
         sts = boto3.client('sts')
 
